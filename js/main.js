@@ -34,7 +34,7 @@ function subscribe() {
 	var data = { "token" : localStorage.getItem("token") };
 	$.ajax({
 		type: "POST",
-		url: "https://52.54.173.11:8081/push/token",
+		url: "https://52.54.173.11:443/push/token",
 		processData: false,
 		contentType: 'application/json',
 		data: JSON.stringify(data),
