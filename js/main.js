@@ -27,6 +27,7 @@ function subscribe() {
   then(function(pushSubscription) {
     sub = pushSubscription;
     console.log('Subscribed! Endpoint:', sub.endpoint);
+	  $('.result').val(sub.endpoint);
 	localStorage.setItem("token",sub.endpoint);
     subscribeButton.textContent = 'Không nhận thông báo từ Wego';
     isSubscribed = true;
