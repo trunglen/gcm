@@ -31,18 +31,6 @@ function subscribe() {
 	localStorage.setItem("token",sub.endpoint);
     subscribeButton.textContent = 'Không nhận thông báo từ Wego';
     isSubscribed = true;
-
-	var data = { "token" : localStorage.getItem("token") };
-	$.ajax({
-		type: "POST",
-		url: "https://52.54.173.11:443/push/token",
-		processData: false,
-		contentType: 'application/json',
-		data: JSON.stringify(data),
-		success: function(r) {
-			
-		}
-	});
   });
 }
 
